@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .frame{
+            border: 0px;
+            display: none;
+        }
+        .divs{
+            display: inline-block;
+            width: 49%;
+            position: fixed;
+            top: 87%;
+            left: 9px;
+            background-color: darksalmon;
+        }
+        p{
+            padding-top: 16px;
+            font-size: larger;
+        }
+        body{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="container" style='overflow: hidden;'>
+    <iframe id="frame" class="frame" height="0" width="0"></iframe>
+    <iframe id="frame2" class="frame" height="0" width="0"></iframe>
+    <div id="open" class="divs"><p><b>Open</b></p></div>
+    <div id="close" class="divs"><p><b>Close</b></p></div>
+</div>
+
+<script>
+    var open = document.getElementById('open');
+    var frame = document.getElementById('frame');
+    var frame2 = document.getElementById('frame2');
+    var close = document.getElementById('close');
+    var width = window.innerWidth;
+    var height  = window.innerHeight-100;
+
+    console.log(width);
+    console.log(height);
+
+    //open.style.width = (width/2)+'px';
+    //close.style.width = (width/2)+'px';
+
+    //open.style.height = '80px';
+    //close.style.height = '80px';
+
+    close.style.left = "50%"
+
+    open.children[0].style.paddingLeft = (width/4)-30+'px';
+    close.children[0].style.paddingLeft = (width/4)-30+'px';
+
+    frame.src = "http://www.beeg.com";
+    frame2.src = './';
+
+    open.onmouseenter = openFunc;
+    open.ontouchstart = openFunc;
+    close.onmouseenter = closeFunc;
+    close.ontouchstart = closeFunc;
+
+    function openFunc() {
+        var width = window.innerWidth;
+        frame.height = height;
+        frame.width = width/*254*/;
+        frame.style.display = "inline-block";
+        frame2.style.display = "none";
+        var url = document.getElementById("frame").contentWindow.location.href;
+        console.log(url);
+    }
+
+    function closeFunc() {
+        frame2.height = height;
+        frame2.width = width;
+        frame2.style.display = "inline-block";
+        frame.style.display = "none";
+    }
+    window.onresize=function resize(){
+        console.log("Resize");
+        var width = window.innerWidth;
+        frame.width = width;
+        frame2.width = width;
+        open.children[0].style.paddingLeft = (width/4)-30+'px';
+        close.children[0].style.paddingLeft = (width/4)-30+'px';
+    };
+</script>
+</body>
+</html>

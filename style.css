@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+
+
+@media screen {
+
+    #barcode {
+        display: block;
+        margin: auto;
+    }
+
+    #description{
+        font-size: large;
+        height: 135px;
+    }
+
+    #price1, #price2{
+        font-weight: bolder;
+        font-size: x-large;
+    }
+
+    #price2{
+        font-size: 400%;
+        color: red;
+    }
+
+    #info1{
+        font-size: small;
+    }
+
+    #info2{
+        font-weight: bold;
+        font-size: medium;
+        color: darkblue;
+    }
+
+    #model_display{
+        font-weight: bold;
+        font-size: medium;
+    }
+
+    #info-in{
+        font-weight: normal;
+        font-size: x-small;
+    }
+
+    #title{
+        font-size: x-large;
+    }
+
+    #title-div{
+        height: 102.35px;
+    }
+
+    #test{
+        padding-bottom: 1in;
+    }
+
+    .card{
+        border-color: black;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+    }
+
+    .card:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    .black-friday{
+        font-family: Impact;
+        font-size: 53px;
+    }
+
+    .sale{
+        color: red;
+    }
+}
+
+@media print {
+
+    @page  {
+        /*
+        previous setting
+        size: 6in 4in;
+         */
+        size: 6in 11in;
+    }
+
+    #container1,#count,#requested,#not_generated,#duplicates, hr {
+        display: none;
+    }
+
+    #barcode {
+        display: block;
+        margin: auto;
+    }
+
+    #description{
+        font-size: 90%;
+        height: 107px;
+    }
+
+    #price1, #price2{
+        font-weight: bolder;
+        font-size: x-large;
+    }
+
+    #price2{
+        font-size: 280%;
+        color: red;
+    }
+
+    #info1{
+        font-size: small;
+    }
+
+    #info2{
+        font-weight: bold;
+        font-size: small;
+        color: darkblue;
+    }
+
+    #model_display{
+        font-weight: bold;
+        font-size: small;
+    }
+
+    #info-in{
+        font-weight: normal;
+        font-size: x-small;
+    }
+
+    #title{
+        /*font-size: larger;*/
+    }
+
+    #title-div{
+        height: 70px;
+    }
+
+    #test {
+        /*previous setting
+        padding-botton: 8.15cm;
+        8.644cm
+         */
+        padding-bottom: 8.655cm;
+    }
+
+    /* To remove card border from print
+    /*
+    .card{
+        border: 0px;
+        padding: 0px 0px 0px 0px;
+    }*/
+
+    .card{
+        border-color: black;
+    }
+
+    .col-print-12 {
+        width: 100%;
+        float: left;
+    }
+
+    .black-friday{
+        font-family: Impact;
+        font-size: 38px;
+    }
+
+    .sale{
+        color: red;
+    }
+}
