@@ -118,7 +118,7 @@
         if(isset($success) && $success ==1){
             echo 'alert("Update Successful. ");';
             //echo "window.location = 'index?model=$modelUpdate'";
-            echo "window.location = '/bartag/edit?model=aaaaaaaaaa'";
+            echo "window.location = '/edit?model=aaaaaaaaaa'";
         }
     ?>
 </script>
