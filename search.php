@@ -4,7 +4,7 @@
 if (isset($_GET['term'])){
     $return_arr = array();
     try {
-        $dbh = new PDO( "mysql:host=localhost;dbname=bartag", "root", "" );
+        $dbh = new PDO( "mysql:host=den1.mysql6.gear.host;dbname=bartag", "bartag", "Sv4Pl-18ZU!R" );
         $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
         $stmt = $dbh->prepare('SELECT Model FROM data WHERE Model LIKE :term');
