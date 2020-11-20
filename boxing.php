@@ -136,7 +136,7 @@ if (isset($_POST["multiple"])) {
                     </div>
                     <div class="col-5 mt-2 p-0 pr-3">
                         <p id="price1" class="text-right mb-0 pr-1">Sale Price</p>
-                        <p id="price2" class="text-right mt-0 mb-0 pr-1" ><?=floatval($avail['PRICE']) ?></p>
+                        <p id="price2" class="text-right mt-0 mb-0 pr-1" ><?php if ($avail['PRICE'] <= 999.99) {echo floatval($avail['PRICE']);} else {echo intval($avail['PRICE']);} ?></p>
                     </div>
                 </div>
                 <div class="row p-0 mb-1">
