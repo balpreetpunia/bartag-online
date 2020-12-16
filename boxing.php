@@ -111,7 +111,7 @@ if (isset($_POST["multiple"])) {
         <div class="container" id="test">
             <div class="col-print-12 col-lg-7 offset-lg-3 card p-6 pt-2 " >
                 <div class="col-print-12 col-lg-12 p-0">
-                    <h1 class="black-friday m-0">BLACK FRIDAY <span class="sale">BLOWOUT SALE</span></h1>
+                    <h1 class="black-friday m-0">BOXING WEEK <span class="sale">BLOWOUT SALE</span></h1>
                 </div>
                 <div id="teletime" class="row">
                     <div id="title-div" class="col-8 p-0 pl-3 pt-3">
